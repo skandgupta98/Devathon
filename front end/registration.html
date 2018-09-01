@@ -1,85 +1,54 @@
-<!DOCTYPE html>
+
+
 <html>
-<head>
-	<title>Register New User</title>	
-	<style>
-		label{
-			display:inline-block;
-			width:150px;
-		}
-	</style>
-</head>
-<body style="margin:0;background-color:#1c478e;color:#fff;">
-	<h1 style="margin:0;padding:5px;background-color:#333;color:#fff;">
-		Register New User
-	</h1>
-	<div style="padding-left:10px;"><!--main div start-->
-			
-			<p>Kindly fill in the following details to register new user</p>
-			<form action="process.php" method="post">
-				<p>
-					<label for="name">Full Name: </label>
-					<input type="text" name="name">
-				</p>
-				<p>
-					<label for="email">Email Address: </label>
-					<input type="text" name="email">
-				</p>
-				<p>
-					<label for="phone">Reg. Number: </label>
-					<input type="text" name="regno">
-				</p>
-                <p>
-					<label for="phone">Phone Number: </label>
-					<input type="text" name="phone">
-				</p>
-                
-				<p>
-					<label for="call">Stream : </label>
-					<input type="radio" name="call" value="B.Tech." checked>B.Tech.
-					<input type="radio" name="call" value="M.Tech">M.Tech.
-					<input type="radio" name="call" value="MBA">MBA
-					<input type="radio" name="call" value="MCA">MCA
-                    <input type="radio" name="call" value="BachelorSciences">B.Sc.
-                    <input type="radio" name="call" value="MasterSciences">M.Sc.
-                    <input type="radio" name="call" value="PHD">PHD
-				</p>
-				<p>
-					<label for="YearOfStudy">Year Of Study</label>
-					<select type="list" name="YearOfStudy">
-					<option>--Select One--</option>
-						<option value="First Year">First Year</option>
-						<option value="Second Year">Second Year</option>
-						<option value="Third Year">Third Year</option>
-						<option value="Fourth Year">Fourth Year</option>
-						<option value="Fifth Year">Fifth Year</option>
-                        <option value="Sixth Year">Sixth Year</option>
-                        
-					</select>
-				</p>
-                <p>
-					<label for="Branch">Branch</label>
-					<select type="list" name="Branch">
-					<option>--Select One--</option>
-						<option value="CSE">CSE</option>
-						<option value="EEE">EEE</option>
-						<option value="ECE">ECE</option>
-						<option value="Mech">Mech</option>
-						<option value="Civil">Civil</option>
-                        <option value="MME">MME</option>
-                        <option value="BioTech">BioTech</option>
-                        <option value="Chemistry">Chemistry</option>
-                        <option value="Maths">Maths</option>
-                        <option value="Physics">Physcics</option>
-					</select>
-				</p>
-                
-				
-				<p>
-					<input type="submit" name="submit" value="Submit Form">
-				</p>
-		
-			</form>
-	</div><!--main div end-->
-</body>
+   <head>
+      <title>Login Page</title>
+   </head>
+   <body>
+      <form name="loginForm" method="post" action="login.php">
+         <table width="20%" bgcolor="0099CC" align="center">
+            <tr>
+               <td colspan=2>
+                  <center><font size=4><b> Library Login Page</b></font></center>
+               </td>
+            </tr>
+            <tr>
+             
+             <p>
+					<label for="type">User : </label>
+					<input type="radio" name="type" value="Student" checked>Student
+<input type="radio" name="type" value="Admin">Admin
+             
+             </tr>
+            <tr>
+               <td>Username:</td>
+               <td><input type="text" size=25 name="userid"></td>
+            </tr>
+            <tr>
+               <td>Password:</td>
+               <td><input type="Password" size=25 name="pwd"></td>
+            </tr>
+            <tr>
+               <td ><input type="Reset"></td>
+               <td><input type="submit" onclick="return check(this.form)" value="Login"></td>
+            </tr>
+         </table>
+      </form>
+      <script language="javascript">
+         function check(form)
+         {
+         
+         if(form.userid.value == "skand" && form.pwd.value == "gupta")
+         {
+         	return true;
+         }
+         else
+         {
+         	alert("Error Password or Username")
+         	return false;
+         }
+         }
+      </script>
+   </body>
 </html>
+
