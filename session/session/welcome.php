@@ -1,0 +1,20 @@
+ <?php
+$name=$_POST['name'];
+$pwd=$_POST['pwd'];
+if($name==""&&$pwd=="")
+{
+header("location:error.php");
+}
+include('connect.php');
+$que=mysqli_query($con,"select * from info where binary name='$name' and binary pwd='$pwd' ");
+if(mysqli_num_rows($que)>0)
+{
+session_start();
+$_SESSION['name']=$name;
+header("location:home.php");
+}
+else
+{
+header("location:error.php");
+}
+?>
