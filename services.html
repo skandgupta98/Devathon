@@ -89,24 +89,7 @@
 		</div>	
 	</div>
 	
-	<div class="services">
-		<div class="container">
-			<h3>Admin Login</h3>
-			<hr>
-			<div class="col-md-6">
-				<p></p>
-			</div>
-			
-			<div class="col-md-6">
-				
-			
-			</div>
-						
-			<div class="col-md-6">
-				<p></p>
-			</div>
-		</div>
-	</div>
+	
       <h3> <form name="loginForm" method="post" action="login.php">
          <div><table width="20%" bgcolor="0099CC" align="center">
             <tr>
@@ -123,10 +106,24 @@
                <td>Password:</td>
                <td><input type="Password" size=25 name="pwd"></td>
             </tr>
+             <tr>
+                 <td><label size="25">User : </label></td>
+            <td><div class="col-lg-8">
+              <div class="ui-select">
+                <select id="user" class="form-control">
+                  <option value="Select one">Select One</option>
+                  <option value="firstYear">Admin</option>
+                  <option value="secondYear">Student</option>
+                 
+                </select>
+                </div></td>
+            </div>
+             </tr>
             <tr>
                 <center>    <td ><input type="Reset"></td> 
                <td><input type="submit" onclick="return check(this.form)" value="Login"></td></center>
             </tr>
+           
              </table> </div>
       </form></h3>
 	
